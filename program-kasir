@@ -1,0 +1,100 @@
+#include <iostream>
+using namespace std;
+
+//Compiler version g++ 6.3.0
+/*
+  halo teman-teman selamat datang kembali di channel 
+  ARASA YT,disini kita akan ngoding membuat program
+  kasir menggunakan bahasa c++
+*/
+    
+   void proses(string namaMakanan, int hargaMakanan){
+     int pembayaran;
+     int kembalian;
+     int totalHargaMakanan;
+     int jumlahMakanan;
+     cout<<"nama makanan            : "<<namaMakanan<<endl;
+     cout<<"harga 1 makanan         : "<<hargaMakanan<<endl;
+     cout<<"masukkan jumlah makanan : ";
+     cin>>jumlahMakanan;
+     totalHargaMakanan = hargaMakanan*jumlahMakanan;
+     cout<<"total harga makanan     : "<<totalHargaMakanan<<endl;
+     cout<<"bayar                   : ";
+     cin>>pembayaran;
+     kembalian = pembayaran - totalHargaMakanan;
+     cout<<"----------------------------------------------"<<endl;
+     if(pembayaran >= totalHargaMakanan){
+       cout<<"___________________________________________"<<endl;
+       cout<<"                WARUNG PAK BUDI            "<<endl;
+       cout<<"___________________________________________"<<endl;
+       cout<<"NAMA MAKANAN    : "<<namaMakanan<<"         "<<endl;
+       cout<<"HARGA 1 MAKANAN : RP "<<hargaMakanan<<"     "<<endl;
+       cout<<"TOTAL HARGA     : RP "<<totalHargaMakanan<<"    "<<endl;
+       cout<<"PEMBAYARAN      : RP "<<pembayaran<<"            "<<endl;
+       cout<<"KEMBALIAN       : RP "<<kembalian<<"              "<<endl;
+       cout<<"                                           "<<endl;    
+       cout<<"TERIMA KASIH SUDAH MAMPIR DI WARUNG KAMI!!!"<<endl;
+       cout<<"___________________________________________"<<endl;
+     }else if(pembayaran < totalHargaMakanan){
+       cout<<"MAAF,UANG ANDA TIDAK CUKUP UNTUK";
+       cout<<" MEMBELI MAKANAN TERSEBUT!!!"<<endl;
+     };
+     cout<<"----------------------------------------------"<<endl;
+   }
+int main()
+{
+    int pilihan;
+    string makanan1 = "sosis";
+    string makanan2 = "seblak";
+    string makanan3 = "kebab";
+    string makanan4 = "burger";
+    string makanan5 = "snack";
+    int hargaMakanan1 = 8500;
+    int hargaMakanan2 = 13000;
+    int hargaMakanan3 = 10000;
+    int hargaMakanan4 = 15000;
+    int hargaMakanan5 = 9000;
+    string ulangProgram;
+    do{
+      cout<<"-------------------------------"<<endl;
+      cout<<"       WARUNG PAK BUDI         "<<endl;
+      cout<<"-------------------------------"<<endl;
+      cout<<"1.SOSIS              RP 8.500  "<<endl;
+      cout<<"2.SEBLAK             RP 13.000 "<<endl;
+      cout<<"3.KEBAB              RP 10.000 "<<endl;
+      cout<<"4.BURGER             RP 15.000 "<<endl;
+      cout<<"5.SNACK              RP 9.000   "<<endl;
+      cout<<"-------------------------------"<<endl;
+      cout<<"SILAHKAN PILIH MENU : ";
+      cin>>pilihan;
+      cout<<"-------------------------------"<<endl;
+      if(pilihan == 1){
+        proses(makanan1,hargaMakanan1);
+      }else if(pilihan == 2){
+        proses(makanan2, hargaMakanan2);
+      }else if(pilihan == 3){
+        proses(makanan3, hargaMakanan3);
+      }else if(pilihan == 4){
+        proses(makanan4, hargaMakanan4);
+      }else if(pilihan == 5){
+        proses(makanan5, hargaMakanan5);
+      }else{
+        cout<<"MAAF,TIDAK TERDAPAT DI PILIHAN!!!"<<endl;
+      };
+      cout<<"-------------------------------"<<endl;
+      cout<<"INGIN ULANG PROGRAM (iya/tidak) : ";
+      cin>>ulangProgram;
+    }while(ulangProgram == "iya");
+    /*
+      memang program nya kalau di run kadang tidak 
+      jalan teman-teman,bukan codenya yang salah ya
+
+
+     mungkin sampai sini saja untuk coding kita
+     di konten ini
+     
+     
+     BYE-BYE!!!! 
+
+      */
+}
